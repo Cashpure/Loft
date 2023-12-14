@@ -55,6 +55,31 @@ $(function () {
          $('.burger').removeClass('burger--follow')
       }
    }, 0)
+   setInterval(() => {
+      if ($(window).scrollTop() > 150) {
+         $('.about__info-column img').addClass('about-img__active')
+      }
+   }, 0)
+   setInterval(() => {
+      if ($(window).scrollTop() > 150) {
+         $('.about__info-column p').addClass('about-p__active')
+      }
+   }, 600)
+   setInterval(() => {
+      if ($(window).scrollTop() > 1480) {
+         $('.cta__info-title').addClass('cta-title__active')
+      }
+   }, 0)
+   // setInterval(() => {
+   //    if ($(window).scrollTop() > 1480 ) {
+   //       $('.cta__info-text').addClass('cta-text__active')
+   //    }
+   // }, 600)
+   setInterval(() => {
+      if ($('.cta__info-title').hasClass('cta-title__active')) {
+         $('.cta__info-text').delay(600).addClass('cta-text__active')
+      }
+   }, 600)
 });
 
 
