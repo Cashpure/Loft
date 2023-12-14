@@ -137,6 +137,10 @@ iframe {
   display: block;
   margin: 0 auto;
   margin-bottom: 53px;
+
+  transform: translateY(120%);
+  opacity: 0;
+  transition: all .8s;
 }
 .about__info-column p {
   margin-right: 70px;
@@ -144,6 +148,10 @@ iframe {
   line-height: 27px;
   text-align: center;
   max-width: 193px;
+
+  transform: translateY(120%);
+  opacity: 0;
+  transition: all .8s;
 }
 .about__info-column p:last-child {
   margin-right: 0;
@@ -224,10 +232,18 @@ iframe {
 }
 .cta__info .cta__info-title {
   margin-bottom: 17px;
+
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all .9s;
 }
 .cta__info .cta__info-text {
   font-size: 16px;
   line-height: 24px;
+
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all .9s;
 }
 
 .cta__contact {
@@ -739,4 +755,24 @@ iframe {
     margin-top: 30px;
     padding-bottom: 30px;
   }
+
+  .about-img__active {
+   transform: translateY(0) !important;
+   opacity: 1 !important;
+}
+
+.about-p__active {
+   transform: translateY(0) !important;
+   opacity: 1 !important;
+}
+
+.cta-title__active {
+   transform: translateX(0) !important;
+   opacity: 1 !important;
+}
+
+.cta-text__active {
+   transform: translateX(0) !important;
+   opacity: 1 !important;
+}
 }/*# sourceMappingURL=Loft.css.map */
