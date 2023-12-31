@@ -4,11 +4,11 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7,IE=edge">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
    <link rel="shortcut icon" href="../favicon/icons8-home-32.png" type="image/x-icon">
    <link rel="stylesheet" href="../style/fonts/fonts.css">
-   <link rel="stylesheet" href="../style/css/reset.css">
+   <link rel="stylesheet" href="../../css/reset.css">
    <link rel="stylesheet" href="../style/css/Loft.css">
    <title>Loft</title>
 </head>
@@ -170,9 +170,9 @@
                   </div>
                   <div class="cta__contact">
                      <form class="cta__contact-form form">
-                        <input id="name" type="text" class="cta__contact-input input" placeholder="Ваше имя"
+                        <input id="name-1" type="text" class="cta__contact-input input" placeholder="Ваше имя"
                            autocomplete="off">
-                        <input id="phone" type="text" class="cta__contact-input input" placeholder="Ваш телефон"
+                        <input id="phone-1" type="text" class="cta__contact-input input" placeholder="Ваш телефон"
                            autocomplete="off">
                      </form>
                      <div class="cta__contact-btn-inner">
@@ -186,7 +186,7 @@
                </div>
             </div>
          </section>
-         <section class="video">
+         <div class="video">
             <div class="container">
                <a href="https://youtu.be/ZQRsDx11pCg?si=NPxxAIEHkT_vr5DM" class="video__wrapper back" data-fancybox>
                   <div class="video__button">
@@ -205,7 +205,7 @@
                   </div>
                </a>
             </div>
-         </section>
+         </div>
          <section id="map-section" class="map-section">
             <div class="container">
                <div class="map-section__title">
@@ -214,7 +214,7 @@
                <div class="map" id="map">
                   <iframe
                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.244262154334!2d30.33725297730456!3d59.94468166161346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696317353b89bb9%3A0x20cf3d56c822786b!2z0L3QsNCx0LXRgNC10LbQvdCw0Y8g0YDQtdC60Lgg0KTQvtC90YLQsNC90LrQuCwgMTAsIDE1LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg3!5e0!3m2!1sru!2sru!4v1702199034063!5m2!1sru!2sru"
-                     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                     style="border:0; width: 100%; height: 450px;" allowfullscreen="" loading="lazy"
                      referrerpolicy="no-referrer-when-downgrade"></iframe>
                </div>
             </div>
@@ -228,9 +228,9 @@
                   <p>*Мы никому не передаем ваши данные.
                      И не сохраняем ваш номер в базу.</p>
                   <form class="faq__contact-form">
-                     <input id="name" type="text" class="faq__contact-input input" placeholder="Ваше имя"
+                     <input id="name-2" type="text" class="faq__contact-input input" placeholder="Ваше имя"
                         autocomplete="off">
-                     <input id="phone" type="text" class="faq__contact-input input" placeholder="Ваш телефон"
+                     <input id="phone-2" type="text" class="faq__contact-input input" placeholder="Ваш телефон"
                         autocomplete="off">
                      <button type="submit" class="faq__btn button">Посмотреть район</button>
                   </form>
@@ -341,17 +341,13 @@
          <div class="copyright">@ Made by Cashpure</div>
       </footer>
    </div>
-</body>
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
    crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-<!-- <script src="https://api-maps.yandex.ru/v3/?apikey=b4056d2e-7ede-474a-ad54-f867ea8f3e03&lang=ru_RU"></script> -->
-<!-- <script>
-   (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
-      key: "AIzaSyDV-Bh5zgXLVIWmu2fuU0prkjxS0ShdE7A",
-   });
-</script> -->
 
 <script src="../script/Loft.js"></script>
+<script src="../script/no-jquery.js"></script>
+</body>
+
 
 </html>
