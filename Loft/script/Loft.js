@@ -23,6 +23,10 @@ $(function () {
       $('.about__grid-description-content-4--active').slideToggle();
       $('.about__grid-item-4 img').toggleClass('active')
    })
+   $('.video__wrapper').hover(function (e) {
+      e.preventDefault()
+      $('.video-overlay').fadeToggle()
+   })
 
    $('.video__wrapper').hover(function (e) {
       e.preventDefault()
