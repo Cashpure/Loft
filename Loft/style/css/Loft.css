@@ -137,10 +137,9 @@ iframe {
   display: block;
   margin: 0 auto;
   margin-bottom: 53px;
-
   transform: translateY(120%);
   opacity: 0;
-  transition: all .8s;
+  transition: all 0.8s;
 }
 .about__info-column p {
   margin-right: 70px;
@@ -148,13 +147,32 @@ iframe {
   line-height: 27px;
   text-align: center;
   max-width: 193px;
-
   transform: translateY(120%);
   opacity: 0;
-  transition: all .8s;
+  transition: all 0.8s;
 }
 .about__info-column p:last-child {
   margin-right: 0;
+}
+
+.about-img__active {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+.about-p__active {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+.cta-title__active {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+
+.cta-text__active {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
 }
 
 .about__apartments {
@@ -232,18 +250,16 @@ iframe {
 }
 .cta__info .cta__info-title {
   margin-bottom: 17px;
-
   transform: translateX(-100%);
   opacity: 0;
-  transition: all .9s;
+  transition: all 0.9s;
 }
 .cta__info .cta__info-text {
   font-size: 16px;
   line-height: 24px;
-
   transform: translateX(-100%);
   opacity: 0;
-  transition: all .9s;
+  transition: all 0.9s;
 }
 
 .cta__contact {
@@ -319,18 +335,25 @@ iframe {
 }
 
 .video__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  position: relative;
   width: 720px;
   height: 650px;
   background: url(../../pictures/PlayBG.jpg);
   margin: 0 auto;
   transition: all 0.3s;
 }
-.video__wrapper.back {
-  transition: all 0.3s;
-  background: url(../../pictures/PlayBG-2.jpg);
+.video__wrapper .video-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(56, 56, 56, 0.712);
+}
+.video__wrapper .video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .video__wrapper .video__button svg {
   transition: all 0.3s;
@@ -479,25 +502,6 @@ iframe {
   display: none;
   z-index: 150;
 }
-  .about-img__active {
-   transform: translateY(0) !important;
-   opacity: 1 !important;
-}
-
-.about-p__active {
-   transform: translateY(0) !important;
-   opacity: 1 !important;
-}
-
-.cta-title__active {
-   transform: translateX(0) !important;
-   opacity: 1 !important;
-}
-
-.cta-text__active {
-   transform: translateX(0) !important;
-   opacity: 1 !important;
-}
 
 @media (max-width: 1145px) {
   .about__grid-item img {
@@ -543,9 +547,6 @@ iframe {
   .footer-nav__navigation-2 {
     display: inline-block;
     margin-top: 25px;
-  }
-  .footer-nav__site {
-    padding-bottom: 30px;
   }
   .footer-nav__site-list {
     display: none;
@@ -774,5 +775,4 @@ iframe {
     margin-top: 30px;
     padding-bottom: 30px;
   }
-}
-/*# sourceMappingURL=Loft.css.map */
+}/*# sourceMappingURL=Loft.css.map */
